@@ -210,27 +210,13 @@ function logIncomingMessage({
         msg?.key?.participant ||
         "غير معروف";
 
-    console.log(
-        `\n┏━━ 📥 وَارِد | #${id} | ${consoleTime()} ━━━━━━━━━`
-    );
-    console.log(
-        `┃ 🤖 الوحدة: ${session?.label || "MAIN"}`
-    );
-    console.log(
-        `┃ 👤 المرسل: ${senderName} | ${sender}`
-    );
-    console.log(
-        `┃ 👥 القروب: ${jid}`
-    );
-    console.log(
-        `┃ 🧩 النوع: ${type}`
-    );
-    console.log(
-        `┃ 📝 المحتوى: ${compactConsoleText(body || "", 420)}`
-    );
-    console.log(
-        `┗────────────────────────────━━━━━━━━`
-    );
+    console.log(`\n📥 وَارِد | #${id} | ${consoleTime()}`);
+    console.log(`   🤖 الوحدة: ${session?.label || "MAIN"}`);
+    console.log(`   👤 المرسل: ${senderName} | ${sender}`);
+    console.log(`   👥 القروب: ${jid}`);
+    console.log(`   🧩 النوع: ${type}`);
+    console.log(`   📝 المحتوى: ${compactConsoleText(body || "", 420)}`);
+    console.log("────────────────────────────────────────");
 }
 
 function logOutgoingMessage({
@@ -239,24 +225,12 @@ function logOutgoingMessage({
     mode = "TEXT",
     sessionLabel = null
 }) {
-    console.log(
-        `\n┏━━ 📤 صَادِر | ${consoleTime()} ━━━━━━━━━`
-    );
-    console.log(
-        `┃ 🤖 الوحدة: ${sessionLabel || "MAIN"}`
-    );
-    console.log(
-        `┃ 👥 إلى: ${jid}`
-    );
-    console.log(
-        `┃ 🧩 النوع: ${mode}`
-    );
-    console.log(
-        `┃ 💬 الرد: ${compactConsoleText(text, 420)}`
-    );
-    console.log(
-        `┗────────────────────────────━━━━━━━━`
-    );
+    console.log(`\n📤 صَادِر | ${consoleTime()}`);
+    console.log(`   🤖 الوحدة: ${sessionLabel || "MAIN"}`);
+    console.log(`   👥 إلى: ${jid}`);
+    console.log(`   🧩 النوع: ${mode}`);
+    console.log(`   💬 الرد: ${compactConsoleText(text, 420)}`);
+    console.log("────────────────────────────────────────");
 }
 
 function findSessionBySocket(sock) {
@@ -972,7 +946,7 @@ function stripCardDecorations(text) {
 
 function buildBrightCard(text, accent = "◆") {
     const body = stripCardDecorations(text);
-    return `┌────────────────┐\n      ARTHUR\n└────────────────┘\n\n${body}\n\n──────────────\n© ARTHUR`;
+    return `✦ 𝐀𝐑𝐓𝐇𝐔𝐑 | OFFICIAL ✦\n\n${body}\n\n──────────────\n© ARTHUR`;
 }
 
 // Rate-limit normal bot replies per destination. Security actions (kick/delete/lock)
@@ -4282,53 +4256,17 @@ async function startBot() {
         // 🧾 INFO
         // ==========================
 
-        console.log(
-            "\n╔══════════════════════════════════════╗"
-        );
-
-        console.log(
-            "║        Arthur | Arthur       ║"
-        );
-
-        console.log(
-            "║                                      ║"
-        );
-
-        console.log(
-            "║  🦊 Identity    : ARTHUR          ║"
-        );
-
-        console.log(
-            "║  🎖️ Bot         : Arthur       ║"
-        );
-
-        console.log(
-            "║  👑 Owner      : 84562869368       ║"
-        );
-
-        console.log(
-            "║  🛡️ Protection : FIRST CONTACT      ║"
-        );
-
-        console.log(
-            "║  ⚔️ Priority   : KICK / LOCK / DEL ║"
-        );
-
-        console.log(
-            "║  📡 Install    : $تنصيب             ║"
-        );
-
-        console.log(
-            "║  📡 Uninstall  : $الغاء_تنصيب       ║"
-        );
-
-        console.log(
-            "║  📲 Sessions   : MULTI ACCOUNT      ║"
-        );
-
-        console.log(
-            "╚══════════════════════════════════════╝\n"
-        );
+        console.log("\nARTHUR | OFFICIAL");
+        console.log("────────────────────────────────────────");
+        console.log("🦊 Identity    : ARTHUR");
+        console.log("🎖️ Bot         : ARTHUR");
+        console.log(`👑 Owner       : ${MAIN_OWNER_NUMBER}`);
+        console.log("🛡️ Protection  : FIRST CONTACT");
+        console.log("⚔️ Priority    : KICK / LOCK / DEL");
+        console.log("📡 Install     : $تنصيب");
+        console.log("📡 Uninstall   : $الغاء_تنصيب");
+        console.log("📲 Sessions    : MULTI ACCOUNT");
+        console.log("────────────────────────────────────────\n");
     } finally {
         mainSession.starting = false;
     }
@@ -4353,3 +4291,4 @@ startBot().catch(error => {
 
     process.exit(1);
 });
+كح9
