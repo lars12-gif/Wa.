@@ -1,0 +1,19 @@
+{
+  "name": "arthur-whatsapp-bot",
+  "version": "1.2.0",
+  "private": true,
+  "description": "Arthur WhatsApp bot with simplified message cards and targeted Baileys LID/PN decrypt retry fix",
+  "main": "index.js",
+  "scripts": {
+    "start": "node index.js",
+    "check": "node --check index.js"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "@whiskeysockets/baileys": "github:daniel-n-silva/Baileys#fix/lid-pn-decrypt-retry",
+    "dotenv": "^16.4.7",
+    "pino": "^9.6.0"
+  }
+}
