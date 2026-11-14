@@ -1,0 +1,10 @@
+services:
+  - type: worker
+    name: volcano-whatsapp-guard
+    runtime: docker
+    dockerfilePath: ./Dockerfile
+    autoDeploy: true
+    disk:
+      name: volcano-auth
+      mountPath: /app/auth
+      sizeGB: 1

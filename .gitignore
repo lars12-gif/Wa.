@@ -1,12 +1,6 @@
 node_modules/
 .env
-owner_number.txt
-auth_info_baileys/
-sessions/
-pending_sessions/
-sessions_config.json
-installed_groups.json
-keyword_replies.json
-religious_schedules.json
-watchdog.log
-startup-error.log
+auth/*
+!auth/.gitkeep
+data/groups.json
+logs/*
